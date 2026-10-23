@@ -1,0 +1,7 @@
+flowchart TD
+    User[Customer / Administrator] --> UI[Presentation Layer\nConsoleUI]
+    UI --> Services[Business Logic Layer\nUserService · ProductService\nCartService · OrderService]
+    Services --> Patterns[Strategy · Adapter · Decorator]
+    Services --> DM[Data Access Layer\nDataManager]
+    Services --> Models[Domain Model\nProduct · User · Cart\nOrder · Notification]
+    DM --> Files[(Persistent text files)]

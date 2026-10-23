@@ -1,0 +1,2 @@
+1|Administrator|admin@adidas.demo|admin123|ADMIN
+2|Demo Customer|customer@adidas.demo|customer123|CUSTOMER

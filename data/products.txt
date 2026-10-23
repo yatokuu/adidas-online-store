@@ -1,0 +1,8 @@
+1|Ultraboost Light|Shoes|Responsive Adidas running shoes|189.99|12
+2|Samba OG|Shoes|Classic leather lifestyle shoes|119.99|18
+3|Adizero Boston 12|Shoes|Fast training running shoes|159.99|8
+4|Essentials Hoodie|Clothing|Soft cotton fleece hoodie|74.99|20
+5|Own the Run T-Shirt|Clothing|Breathable running shirt|39.99|25
+6|Tiro Track Pants|Clothing|Regular fit training pants|59.99|14
+7|Classic Backpack|Accessories|Everyday sports backpack|44.99|15
+8|Performance Cap|Accessories|Lightweight adjustable sports cap|29.99|30

@@ -1,0 +1,30 @@
+erDiagram
+    USER ||--o| SHOPPING_CART : owns
+    USER ||--o{ ORDER : places
+    USER ||--o{ NOTIFICATION : receives
+    SHOPPING_CART ||--o{ CART_ITEM : contains
+    PRODUCT ||--o{ CART_ITEM : selected_as
+    ORDER ||--|{ ORDER_ITEM : contains
+    PRODUCT ||--o{ ORDER_ITEM : copied_to
+
+    USER {
+        int id
+        string name
+        string email
+        string password
+        string role
+    }
+    PRODUCT {
+        int id
+        string name
+        string category
+        double price
+        int stock
+    }
+    ORDER {
+        int id
+        int userId
+        double total
+        string status
+        string paymentMethod
+    }

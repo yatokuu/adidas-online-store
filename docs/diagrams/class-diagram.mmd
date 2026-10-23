@@ -1,0 +1,73 @@
+classDiagram
+    class Main
+    class ConsoleUI
+    class UserService
+    class ProductService
+    class CartService
+    class OrderService
+    class DataManager
+    class StoreData
+    class User
+    class Product
+    class ShoppingCart
+    class CartItem
+    class Order
+    class OrderItem
+    class Notification
+
+    Main --> ConsoleUI
+    Main --> DataManager
+    ConsoleUI --> UserService
+    ConsoleUI --> ProductService
+    ConsoleUI --> CartService
+    ConsoleUI --> OrderService
+    DataManager --> StoreData
+    StoreData o-- User
+    StoreData o-- Product
+    StoreData o-- ShoppingCart
+    StoreData o-- Order
+    StoreData o-- Notification
+    ShoppingCart o-- CartItem
+    CartItem --> Product
+    Order o-- OrderItem
+
+    class DiscountStrategy {
+        <<interface>>
+        calculateDiscount(total, itemCount)
+        getName()
+    }
+    class NoDiscountStrategy
+    class SeasonalDiscountStrategy
+    class BulkDiscountStrategy
+    DiscountStrategy <|.. NoDiscountStrategy
+    DiscountStrategy <|.. SeasonalDiscountStrategy
+    DiscountStrategy <|.. BulkDiscountStrategy
+    OrderService --> DiscountStrategy
+
+    class PaymentProcessor {
+        <<interface>>
+        processPayment(amount)
+        getPaymentMethod()
+    }
+    class CardPaymentAdapter
+    class ExternalPaymentSystem
+    PaymentProcessor <|.. CardPaymentAdapter
+    CardPaymentAdapter --> ExternalPaymentSystem
+    OrderService --> PaymentProcessor
+
+    class OrderPrice {
+        <<interface>>
+        getCost()
+        getDescription()
+    }
+    class BasicOrder
+    class OrderDecorator
+    class GiftWrapDecorator
+    class ExpressDeliveryDecorator
+    class InsuranceDecorator
+    OrderPrice <|.. BasicOrder
+    OrderPrice <|.. OrderDecorator
+    OrderDecorator o-- OrderPrice
+    OrderDecorator <|-- GiftWrapDecorator
+    OrderDecorator <|-- ExpressDeliveryDecorator
+    OrderDecorator <|-- InsuranceDecorator
