@@ -100,8 +100,5 @@ docs/                  requirements, diagrams, design explanation, and tests
 - [Data model and persistence](docs/DATA_MODEL.md)
 - [Test documentation](docs/TEST_DOCUMENTATION.md)
 - [All diagrams in one page](docs/DIAGRAMS.md)
-- [Assignment checklist](docs/ASSIGNMENT_CHECKLIST.md)
-- [Defense questions and answers](docs/DEFENSE_GUIDE.md)
-- [Defense presentation outline](docs/PRESENTATION.md)
 
 The Mermaid source for the diagrams is in `docs/diagrams`. GitHub and many Markdown editors render Mermaid diagrams automatically.
